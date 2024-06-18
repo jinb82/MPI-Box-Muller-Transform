@@ -1,0 +1,28 @@
+Mmax= 10
+E/Mmax= 3.65459
+V/Mmax - E^2/Mmax^2= 17.082
+Mmax= 100
+E/Mmax= 2.11574
+V/Mmax - E^2/Mmax^2= 4.79289
+Mmax= 1000
+E/Mmax= 2.0209
+V/Mmax - E^2/Mmax^2= 4.0174
+Mmax= 10000
+E/Mmax= 2.01806
+V/Mmax - E^2/Mmax^2= 4.17973
+
+The theoretical distribution for the Box-Muller transformation generates two independent standard normal random variables X_1 and X_2. For a standard normal distribution:
+
+- The expectation  E[X^2] = 1 
+- The fourth moment  E[X^4] = 3 
+- Variance of X^2 is  E[X^4] - (E[X^2])^2 = 3 - 1^2 = 2 
+
+Let's denote  Y = X_1^2 + X_2^2 . For Y:
+
+- The expectation  E[Y] = E[X_1^2] + E[X_2^2] = 2 
+- The fourth moment  E[Y^2] = E[(X_1^2 + X_2^2)^2] = E[X_1^4] + 2E[X_1^2 X_2^2] + E[X_2^4] = 3 + 1 + 3 = 7 
+- Variance of Y is  E[Y^2] - (E[Y])^2 = 7 - 2^2 = 3 
+
+Thus, as Mmax becomes large, the sample mean E/Mmax should converge to 2, and the sample variance  (V/Mmax) - (E/Mmax)^2  should converge to 3.
+
+As Mmax increases, the values of  E/Mmax  approach 2, and the values of  V/Mmax - (E/Mmax)^2  approach 3, consistent with the theoretical moments of the distribution.
